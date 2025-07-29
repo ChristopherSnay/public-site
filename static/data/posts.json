@@ -18,6 +18,13 @@
         "title": "World",
         "date": "2025-07-29",
         "image": "splash-bg.jpg",
+        "paragraphs": [
+            "Metus pellentesque volutpat eu suscipit ut varius cursus nostra viverra tincidunt sed est. Donec inceptos odio tincidunt curabitur nunc porttitor duis. Netus aptent leo arcu consequat himenaeos habitasse litora consequat lobortis ullamcorper congue nisl consectetur.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque nunc netus elit torquent netus pellentesque. Hendrerit dignissim diam netus adipiscing sed imperdiet etiam risus. Malesuada urna tempor sociosqu posuere risus euismod tristique eu ipsum sed varius at erat. Malesuada ornare imperdiet eleifend nostra elementum laoreet maecenas in rutrum duis turpis id placerat.",
+            "Rutrum cursus imperdiet senectus nulla nullam mi interdum nibh suspendisse eros placerat massa tellus quis. Id maecenas fringilla curabitur non odio ut litora enim justo sodales commodo ornare.",
+            "Eleifend ante iaculis velit venenatis maximus ante. Cras pulvinar cubilia placerat justo turpis aliquam enim tortor amet vivamus pharetra praesent torquent rhoncus.",
+            "Integer nostra ut dolor lacus platea dignissim felis a primis condimentum litora cras interdum velit. Taciti ullamcorper primis ex morbi mattis felis habitasse. Bibendum interdum facilisis diam urna fames commodo aptent commodo donec tristique at integer. Hendrerit ac elementum rhoncus torquent tempor sociosqu proin fringilla vulputate cras bibendum mollis mattis luctus. Varius luctus tellus in netus taciti malesuada hendrerit massa augue diam mattis suscipit litora."
+        ],
         "tags": [
             "updates",
             "code"
