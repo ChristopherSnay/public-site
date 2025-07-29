@@ -16,7 +16,7 @@ const darkTheme = createTheme({
 
 const router = createBrowserRouter([
   {
-    path: '/', element: <App />, children: [
+    path: '/public-site', element: <App />, children: [
       { index: true, element: <MainPage /> }
     ]
   }

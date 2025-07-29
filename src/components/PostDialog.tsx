@@ -1,12 +1,14 @@
 import { ArrowBack } from '@mui/icons-material';
 import CloseIcon from '@mui/icons-material/Close';
-import { Dialog, DialogContent, DialogTitle, IconButton, Paper, Typography } from "@mui/material";
+import { Avatar, Box, Dialog, DialogContent, DialogTitle, IconButton, Paper, Typography } from "@mui/material";
 import { useMemo } from "react";
+import useImageLinks from '../hooks/useImageLinks';
 import usePosts from "../hooks/usePosts";
 import type { Post } from "../models/Post";
 
 export default function PostDialog(props: Readonly<PostDialogProps>) {
     const { posts } = usePosts();
+    const { localImage } = useImageLinks();
 
     const post = useMemo<Post | undefined>(() => {
         return posts.find(x => x.id == props.id);
@@ -28,16 +30,38 @@ export default function PostDialog(props: Readonly<PostDialogProps>) {
 
                     <DialogContent className="p-0">
                         <Paper square className="p-3">
+                            <div className="container">
+                                <Box component="img"
+                                    src={localImage(`static/images/${post.image}`)}
+                                    sx={{
+                                        borderRadius: 1,
+                                        display: 'block',
+                                        width: '100%',
+                                        maxWidth: {
+                                            xs: '100%',
+                                            sm: '100%',
+                                            md: 600,
+                                            lg: 500
+                                        },
+                                        margin: 'auto'
+                                    }} />
 
-                            <img src={`/static/images/${post.image}`}
-                                className="w-100 h-50 object-fit-cover" />
-                            <Typography variant="h4" className="py-3">
-                                {post.title}
-                            </Typography>
+                                <div className="d-flex align-items-center py-3" onClick={(e) => { e.preventDefault(); console.debug('ok') }}>
+                                    <Avatar variant="square">CS</Avatar>
+                                    <div className="d-flex flex-column ms-2">
+                                        <Typography variant="body1">Christopher Snay</Typography>
+                                        <Typography color="textSecondary" variant="caption">{new Date(post.date).toLocaleString()}</Typography>
+                                    </div>
+                                </div>
+                                <hr className="m-0" />
+                                <Typography variant="h4" className="py-3">
+                                    {post.title}
+                                </Typography>
 
-                            {post.paragraphs?.map((paragraph, pIndex) => (
-                                <p key={pIndex}>{paragraph}</p>
-                            ))}
+                                {post.paragraphs?.map((paragraph, pIndex) => (
+                                    <p key={pIndex}>{paragraph}</p>
+                                ))}
+                            </div>
                         </Paper>
                     </DialogContent>
                 </>

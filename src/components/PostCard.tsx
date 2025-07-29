@@ -1,14 +1,18 @@
 import { Avatar, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import useImageLinks from "../hooks/useImageLinks";
 import type { Post } from "../models/Post";
 
 export default function PostCard(props: Readonly<PostCardProps>) {
+    const { localImage } = useImageLinks();
+
+
     return (
         <Card elevation={5}>
             <CardActionArea onClick={() => props.onPostClick(props.post.id)}>
                 <CardMedia
                     component="img"
                     height="194"
-                    image={`/static/images/${props.post.image}`}
+                    image={localImage(`static/images/${props.post.image}`)}
                     alt="Paella dish"
                 />
 
@@ -33,9 +37,7 @@ export default function PostCard(props: Readonly<PostCardProps>) {
                             {new Date(props.post.date).toLocaleDateString()}
                         </Typography>
                     </div>
-
                 </CardContent>
-
             </CardActionArea>
         </Card>
     )
