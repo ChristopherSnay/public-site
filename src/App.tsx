@@ -17,7 +17,7 @@ function App() {
         </Toolbar>
       </AppBar>
 
-      <main className="d-flex w-100">
+      <main className="d-flex flex-column w-100">
         <Outlet />
       </main>
 

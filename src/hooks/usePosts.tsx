@@ -7,7 +7,7 @@ export default function usePosts() {
 
     useEffect(() => {
         getPosts().then(response => {
-            setPosts(response);
+            setPosts(response.sort((a: Post, b: Post) => new Date(a.date) < new Date(b.date) ? 1 : -1));
         });
     }, []);
 

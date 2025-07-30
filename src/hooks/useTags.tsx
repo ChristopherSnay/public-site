@@ -7,6 +7,7 @@ export default function useTags() {
 
     useEffect(() => {
         getTags().then(response => {
+            response = [{ id: 0, title: 'all' }, ...response]
             setTags(response);
         });
     }, []);
