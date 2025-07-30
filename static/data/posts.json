@@ -51,7 +51,7 @@
         "id": 6,
         "title": "Repeat an Observable in Angular (rxjs)",
         "date": "1/22/2024",
-        "image": "",
+        "image": "post.1.png",
         "blocks": [
             {
                 "content": "interval(1000).subscribe(() => {\n\tthis._getLatest().subscribe(latest => {\n\t});\n});",
