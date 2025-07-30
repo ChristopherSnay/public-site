@@ -4,10 +4,23 @@
         "title": "Hello",
         "date": "2025-07-29",
         "image": "post.1.png",
-        "paragraphs": [
-            "Lorem ipsum dolor sit amet. Ut Quis eius non maxime fugiat eum quas magnam cum aliquid quae qui omnis similique in rerum voluptates rem deleniti dolores. Sit expedita molestiae ut magni repellat eos explicabo expedita. Et voluptatem iste qui adipisci laboriosam a harum consequatur ut voluptas dignissimos. Et dignissimos reprehenderit ex fugiat tenetur aut placeat Quis qui laborum molestiae et dolores dolore ut magni illo.",
-            "Sed quas amet et beatae expedita qui illo quia aut nostrum cupiditate. Non Quis nihil eos voluptatem autem ut blanditiis quia qui temporibus perspiciatis. Id voluptatibus consectetur ut minus porro aut dolore excepturi ut dolorum fuga qui maxime corrupti ad earum dolores et quisquam dolores.",
-            "Ea deleniti galisum est enim aperiam et impedit veniam. Et corporis recusandae ut accusantium iure id voluptatibus asperiores sed ipsum accusantium qui ipsam nemo eum debitis deserunt est distinctio nesciunt. Aut earum nihil qui sint repellendus At sint dicta."
+        "blocks": [
+            {
+                "blockType": 1,
+                "content": "Lorem ipsum dolor sit amet. Ut Quis eius non maxime fugiat eum quas magnam cum aliquid quae qui omnis similique in rerum voluptates rem deleniti dolores. Sit expedita molestiae ut magni repellat eos explicabo expedita. Et voluptatem iste qui adipisci laboriosam a harum consequatur ut voluptas dignissimos. Et dignissimos reprehenderit ex fugiat tenetur aut placeat Quis qui laborum molestiae et dolores dolore ut magni illo."
+            },
+            {
+                "blockType": 1,
+                "content": "Sed quas amet et beatae expedita qui illo quia aut nostrum cupiditate. Non Quis nihil eos voluptatem autem ut blanditiis quia qui temporibus perspiciatis. Id voluptatibus consectetur ut minus porro aut dolore excepturi ut dolorum fuga qui maxime corrupti ad earum dolores et quisquam dolores."
+            },
+            {
+                "blockType": 2,
+                "content": "post.1.png"
+            },
+            {
+                "blockType": 1,
+                "content": "Ea deleniti galisum est enim aperiam et impedit veniam. Et corporis recusandae ut accusantium iure id voluptatibus asperiores sed ipsum accusantium qui ipsam nemo eum debitis deserunt est distinctio nesciunt. Aut earum nihil qui sint repellendus At sint dicta."
+            }
         ],
         "tags": [
             "updates"
@@ -18,12 +31,55 @@
         "title": "World",
         "date": "2025-07-29",
         "image": "splash-bg.jpg",
-        "paragraphs": [
-            "Metus pellentesque volutpat eu suscipit ut varius cursus nostra viverra tincidunt sed est. Donec inceptos odio tincidunt curabitur nunc porttitor duis. Netus aptent leo arcu consequat himenaeos habitasse litora consequat lobortis ullamcorper congue nisl consectetur.",
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque nunc netus elit torquent netus pellentesque. Hendrerit dignissim diam netus adipiscing sed imperdiet etiam risus. Malesuada urna tempor sociosqu posuere risus euismod tristique eu ipsum sed varius at erat. Malesuada ornare imperdiet eleifend nostra elementum laoreet maecenas in rutrum duis turpis id placerat.",
-            "Rutrum cursus imperdiet senectus nulla nullam mi interdum nibh suspendisse eros placerat massa tellus quis. Id maecenas fringilla curabitur non odio ut litora enim justo sodales commodo ornare.",
-            "Eleifend ante iaculis velit venenatis maximus ante. Cras pulvinar cubilia placerat justo turpis aliquam enim tortor amet vivamus pharetra praesent torquent rhoncus.",
-            "Integer nostra ut dolor lacus platea dignissim felis a primis condimentum litora cras interdum velit. Taciti ullamcorper primis ex morbi mattis felis habitasse. Bibendum interdum facilisis diam urna fames commodo aptent commodo donec tristique at integer. Hendrerit ac elementum rhoncus torquent tempor sociosqu proin fringilla vulputate cras bibendum mollis mattis luctus. Varius luctus tellus in netus taciti malesuada hendrerit massa augue diam mattis suscipit litora."
+        "blocks": [
+            {
+                "blockType": 1,
+                "content": "Metus pellentesque volutpat eu suscipit ut varius cursus nostra viverra tincidunt sed est. Donec inceptos odio tincidunt curabitur nunc porttitor duis. Netus aptent leo arcu consequat himenaeos habitasse litora consequat lobortis ullamcorper congue nisl consectetur."
+            },
+            {
+                "blockType": 1,
+                "content": "Sed quas amet et beatae expedita qui illo quia aut nostrum cupiditate. Non Quis nihil eos voluptatem autem ut blanditiis quia qui temporibus perspiciatis. Id voluptatibus consectetur ut minus porro aut dolore excepturi ut dolorum fuga qui maxime corrupti ad earum dolores et quisquam dolores."
+            },
+            {
+                "blockType": 1,
+                "content": "Ea deleniti galisum est enim aperiam et impedit veniam. Et corporis recusandae ut accusantium iure id voluptatibus asperiores sed ipsum accusantium qui ipsam nemo eum debitis deserunt est distinctio nesciunt. Aut earum nihil qui sint repellendus At sint dicta."
+            },
+            {
+                "blockType": 1,
+                "content": "Rutrum cursus imperdiet senectus nulla nullam mi interdum nibh suspendisse eros placerat massa tellus quis. Id maecenas fringilla curabitur non odio ut litora enim justo sodales commodo ornare."
+            },
+            {
+                "blockType": 1,
+                "content": "Integer nostra ut dolor lacus platea dignissim felis a primis condimentum litora cras interdum velit. Taciti ullamcorper primis ex morbi mattis felis habitasse. Bibendum interdum facilisis diam urna fames commodo aptent commodo donec tristique at integer. Hendrerit ac elementum rhoncus torquent tempor sociosqu proin fringilla vulputate cras bibendum mollis mattis luctus. Varius luctus tellus in netus taciti malesuada hendrerit massa augue diam mattis suscipit litora."
+            }
+        ],
+        "tags": [
+            "updates",
+            "code"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Remove EFI System Partition From a Hard Drive",
+        "date": "2025-07-30",
+        "image": "sysadmin.png",
+        "blocks": [
+            {
+                "blockType": 3,
+                "content": "diskpart"
+            },
+            {
+                "blockType": 3,
+                "content": "list disk"
+            },
+            {
+                "blockType": 3,
+                "content": "select disk <the disk number>"
+            },
+            {
+                "blockType": 3,
+                "content": "clean"
+            }
         ],
         "tags": [
             "updates",
