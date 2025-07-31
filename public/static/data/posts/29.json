@@ -1,0 +1,14 @@
+{
+    "title": "Register generics for Dependency Injection",
+    "date": "2019-06-21",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "services.AddTransient(typeof(IExternalApiResponseReader&lt;>),\n typeof(ExternalApiResponseReader&lt;>));"
+        }
+    ],
+    "tags": [
+        "c#"
+    ]
+}

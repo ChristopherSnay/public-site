@@ -1,0 +1,14 @@
+{
+    "title": "Save git Credentials",
+    "date": "2019-10-29",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "git config --global credential.helper store"
+        }
+    ],
+    "tags": [
+        "git"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "title": "Convert Python to Exe",
+    "date": "2019-09-12",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "#Install if needed\npip install pyinstaller\n\n#Generate exe\nC:/>pyinstaller -w -F myfile.py"
+        }
+    ],
+    "tags": [
+        "python"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "title": "Is It Recycling Day?",
+    "date": "2018-11-30",
+    "image": "lisbonrecycling-web_001.png",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "A website for Lisbon residents to check which week is their recycling week. It uses Google Maps API."
+        },
+        {
+            "blockType": 4,
+            "content": "www.lisbonrecycling.com"
+        },
+        {
+            "blockType": 2,
+            "content": "lisbonrecycling-web_001.png"
+        },
+        {
+            "blockType": 2,
+            "content": "lisbonrecycling-web_002.png"
+        },
+        {
+            "blockType": 2,
+            "content": "lisbonrecycling-web_003.png"
+        }
+    ],
+    "tags": [
+        "hobby"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "title": "Build Angular Project for Production w/ Relative Path",
+    "date": "2019-07-22",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "ng build --prod --base-href ./"
+        }
+    ],
+    "tags": [
+        "angular"
+    ]
+}

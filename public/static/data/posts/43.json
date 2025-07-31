@@ -1,0 +1,14 @@
+{
+    "title": "undo git commits",
+    "date": "2020-08-14",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "// deletes the last commit\ngit reset --hard HEAD^\n\n// where X is the number of commits to undo\ngit reset HEAD~X"
+        }
+    ],
+    "tags": [
+        "git"
+    ]
+}

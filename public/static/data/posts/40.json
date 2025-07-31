@@ -1,0 +1,14 @@
+{
+    "title": "Clear NuGet cache",
+    "date": "2020-01-17",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "#Clear local nuget cache \nC:\\tools\\nuget.exe locals all -clear"
+        }
+    ],
+    "tags": [
+        "nuget"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "title": "edit git commit details",
+    "date": "2019-04-28",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "git rebase -i 0abc12def // - the commit before the one that needs edit"
+        },
+        {
+            "blockType": 1,
+            "content": "use vi to change 'pick' to 'edit' on the commit that needs edit"
+        },
+        {
+            "blockType": 3,
+            "content": "git commit --amend --author=\"Christopher Snay &lt;email@email.com>\""
+        },
+        {
+            "blockType": 3,
+            "content": "git rebase --continue // - repeat until all edited commits complete\n\ngit push -f"
+        }
+    ],
+    "tags": [
+        "git"
+    ]
+}

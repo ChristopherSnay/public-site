@@ -33,6 +33,10 @@ export default function PostBlock(props: Readonly<PostBlockProps>) {
                     }}>{props.block.content}</Typography>
                 </Paper>
             </div>
+        case 4:
+            return <a href={`https://${props.block.content}`} target="_blank">
+                {props.block.content}
+            </a>
 
         default:
             return (

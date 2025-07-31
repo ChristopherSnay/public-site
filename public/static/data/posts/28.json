@@ -1,0 +1,14 @@
+{
+    "title": "Remove From git Tracking",
+    "date": "2019-05-30",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "git rm --cached &lt;file>\ngit rm --cached &lt;directory> -r\ngit rm --cached ./ -r"
+        }
+    ],
+    "tags": [
+        "git"
+    ]
+}

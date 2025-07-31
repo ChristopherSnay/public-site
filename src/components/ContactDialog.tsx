@@ -12,9 +12,8 @@ export default function ContactDialog(props: Readonly<ContactDialogProps>) {
             </DialogTitle>
             <DialogContent className="p-0">
                 <Paper square elevation={0} className="p-3" >
-                    christophersnay.com
+                    christopher.snay@gmail.com
                 </Paper>
-
             </DialogContent>
             <DialogActions></DialogActions>
         </Dialog>

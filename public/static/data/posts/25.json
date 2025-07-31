@@ -1,0 +1,14 @@
+{
+    "title": "Start Elasticsearch, Kibana, and Logstash",
+    "date": "2019-04-23",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "elasticsearch\\version\\bin\\elasticsearch.exe\nkibana\\bin\\kibana.bat\nlogstash\\bin\\logstash -f ..\\config\\logstashconfig.conf -r"
+        }
+    ],
+    "tags": [
+        "elasticsearch"
+    ]
+}

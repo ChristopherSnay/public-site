@@ -1,0 +1,14 @@
+{
+    "title": "Get user credentials securely in PowerShell",
+    "date": "2020-01-17",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "#Get user credentials securely\nTry {\n\t$credentials = Get-Credential \"$env:username\"\n}\nCatch {\n\t$log += \"`n- \" + $_.Exception.Message\n\tOutput-Result\n}\n\n#Get current domain to use for authentication. ADSI = Active Directory\n$currentDomain = \"LDAP://\" + ([ADSI]\"\").distinguishedName\n\n#Authenticate\n$activeDirectoryEntry = New-Object System.DirectoryServices.DirectoryEntry($currentDomain,$credentials.GetNetworkCredential().UserName,$credentials.GetNetworkCredential().Password)\nif ($activeDirectoryEntry.name -eq $null)\n{\n    $log += \"`n- Failed to authenticate that username and password.\"\n    Output-Result\t\n} else {\n    $log += \"`n- Authentication was successful.\"\n}\n\n#Display Results\n$log = \"Results:\"\nfunction Output-Result {\n    [System.Reflection.Assembly]::LoadWithPartialName(\"System.Windows.Forms\") > null\n    $oReturn=[System.Windows.Forms.Messagebox]::Show($log)\n    Break\n}"
+        }
+    ],
+    "tags": [
+        "powershell"
+    ]
+}

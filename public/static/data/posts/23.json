@@ -1,0 +1,14 @@
+{
+    "title": "Undo git changes forcibly",
+    "date": "2019-02-14",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "git reset --hard HEAD"
+        }
+    ],
+    "tags": [
+        "git"
+    ]
+}

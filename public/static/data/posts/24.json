@@ -1,0 +1,14 @@
+{
+    "title": "Delete data from Elasticsearch",
+    "date": "2019-04-23",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "// deletes all data\ncurl -XDELETE localhost:9200/*\n\n// deletes index \ncurl -XDELETE localhost:9200/indexname"
+        }
+    ],
+    "tags": [
+        "elasticsearch"
+    ]
+}

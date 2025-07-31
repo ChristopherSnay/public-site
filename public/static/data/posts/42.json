@@ -1,0 +1,14 @@
+{
+    "title": "Import csv into sqlite",
+    "date": "2020-05-17",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "#cd to file.db\nsqlite3\n.open file.db\n.mode csv\n.import file.csv tablename"
+        }
+    ],
+    "tags": [
+        "sqlite"
+    ]
+}

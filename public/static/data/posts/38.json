@@ -1,0 +1,15 @@
+{
+    "title": "Add dll to GAC",
+    "date": "2020-01-17",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "gacutil.exe -i -f C:\\pathtodll\\my.dll"
+        }
+    ],
+    "tags": [
+        "gac",
+        "sysadmin"
+    ]
+}
