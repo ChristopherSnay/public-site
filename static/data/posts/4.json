@@ -1,0 +1,15 @@
+{
+    "title": "Repeat an Observable in Angular (rxjs)",
+    "date": "1/22/2024",
+    "image": "post.1.png",
+    "blocks": [
+        {
+            "content": "interval(1000).subscribe(() => {\n\tthis._getLatest().subscribe(latest => {\n\t});\n});",
+            "blockType": 3
+        }
+    ],
+    "tags": [
+        "code",
+        "angular"
+    ]
+}

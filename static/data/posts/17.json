@@ -1,0 +1,15 @@
+{
+  "id": 17,
+  "title": "Show PATH environment variable in Windows cmd / terminal",
+  "date": "2/1/2023",
+  "image": "",
+  "blocks": [
+    {
+      "content": "echo %PATH:;=&echo.%",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "sysadmin"
+  ]
+}

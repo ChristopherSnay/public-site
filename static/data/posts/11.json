@@ -1,0 +1,19 @@
+{
+  "title": "Angular Missing app.module.ts",
+  "date": "12/1/2023",
+  "image": "",
+  "blocks": [
+    {
+      "content": "app.module.ts is no longer included in the new command. You must include this flag for the app to scaffold like before:",
+      "blockType": 1
+    },
+    {
+      "content": "--no-standalone",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "angular",
+    "code"
+  ]
+}

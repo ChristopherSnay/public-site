@@ -1,0 +1,14 @@
+{
+    "title": "Remove EFI System Partition From a Hard Drive",
+    "date": "2025-07-29",
+    "image": "sysadmin.png",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "diskpart\nlist disk\nselect disk <the disk number>\nclean"
+        }
+    ],
+    "tags": [
+        "sysadmin"
+    ]
+}

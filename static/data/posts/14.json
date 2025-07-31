@@ -1,0 +1,23 @@
+{
+  "title": "Regenerate the Angular browserslist",
+  "date": "9/12/2023",
+  "image": "",
+  "blocks": [
+    {
+      "content": "Delete .browserslistrc file in angular project root",
+      "blockType": 1
+    },
+    {
+      "content": "Run in terminal",
+      "blockType": 1
+    },
+    {
+      "content": "ng generate config browserslist",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "angular",
+    "code"
+  ]
+}

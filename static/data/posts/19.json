@@ -1,0 +1,16 @@
+{
+  "id": 17,
+  "title": "Serialize a model to XML",
+  "date": "10/26/2022",
+  "image": "",
+  "blocks": [
+    {
+      "content": "string xml;\nusing (var writer = new StringWriter())\n{\n\tvar serializer = new XmlSerializer(typeof(MyModel));\n    serializer.Serialize(writer, myModel);\n\txml = writer.ToString();\n}",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "code",
+    "c#"
+  ]
+}

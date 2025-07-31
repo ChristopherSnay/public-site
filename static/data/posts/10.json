@@ -1,0 +1,19 @@
+{
+  "title": "Add environments to Angular App",
+  "date": "12/5/2023",
+  "image": "",
+  "blocks": [
+    {
+      "content": "The ng new command no longer automatically adds environments. You must run the following command:",
+      "blockType": 1
+    },
+    {
+      "content": "ng g environments",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "angular",
+    "code"
+  ]
+}

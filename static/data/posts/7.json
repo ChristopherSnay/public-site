@@ -1,0 +1,15 @@
+{
+    "title": "Insert into a SQL table that only has auto-generated Columns",
+    "date": "12/5/2023",
+    "image": "",
+    "blocks": [
+        {
+            "content": "INSERT INTO table_name DEFAULT VALUES",
+            "blockType": 3
+        }
+    ],
+    "tags": [
+        "sql",
+        "code"
+    ]
+}

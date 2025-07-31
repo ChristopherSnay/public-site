@@ -1,0 +1,16 @@
+{
+  "id": 17,
+  "title": "Assert DoesNotThrow in XUnit",
+  "date": "12/1/2022",
+  "image": "",
+  "blocks": [
+    {
+      "content": "// Act\nvar ex = await Record.ExceptionAsync(() => _thing.DoSomethingAsync());\n\n// Assert\nAssert.Null(ex);",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "code",
+    "c#"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Angular pipe to replace characters in a string",
+  "date": "9/29/2023",
+  "image": "",
+  "blocks": [
+    {
+      "content": "Generate a new pipe using the Angular CLI",
+      "blockType": 1
+    },
+    {
+      "content": "ng g pipe pipes/replace",
+      "blockType": 3
+    },
+    {
+      "content": "Add the following code to the new pipe (pipes/replace.pipe.ts)",
+      "blockType": 1
+    },
+    {
+      "content": "transform(input: string, from: string, to: string): string {\n\tconst regEx = new RegExp(from, 'g');\n\treturn input.replace(regEx, to);\n}",
+      "blockType": 3
+    },
+    {
+      "content": "Usage",
+      "blockType": 1
+    },
+    {
+      "content": "<span>{{myString | replace:'_':' '}}</span>",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "angular",
+    "code"
+  ]
+}
