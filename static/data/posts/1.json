@@ -5,7 +5,7 @@
     "blocks": [
         {
             "blockType": 1,
-            "content": "Due to the rising cost of simple shared hosting (BlueHost), I've written my own lightweight implementation of WordPress from scratch in React and hosted it on GitHub Pages."
+            "content": "Due to the rising cost of simple shared hosting (BlueHost), I've written my own lightweight WordPress replacement from scratch in React and hosted it on GitHub Pages."
         }
     ],
     "tags": [
