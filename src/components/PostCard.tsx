@@ -8,7 +8,7 @@ export default function PostCard(props: Readonly<PostCardProps>) {
     const { toLocalDate } = useDates();
 
     return (
-        <Card elevation={5}>
+        <Card>
             <CardActionArea onClick={() => props.onPostClick(props.post.id)}>
                 {props.post.image && (<CardMedia
                     component="img"
@@ -19,7 +19,7 @@ export default function PostCard(props: Readonly<PostCardProps>) {
 
                 <CardContent>
                     <Typography variant="overline">{props.post.tags.join(', ').toUpperCase()}</Typography>
-                    <Typography variant="h5">{props.post.title}</Typography>
+                    <Typography variant="h5" className="mb-2 mt-0">{props.post.title}</Typography>
                     <Typography variant="body2" sx={{
                         display: '-webkit-box',
                         WebkitLineClamp: 3,

@@ -1,0 +1,14 @@
+{
+  "title": "Do not ignore case with git cli",
+  "date": "2/2/2023",
+  "image": "",
+  "blocks": [
+    {
+      "content": "git config --global core.ignorecase false",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "git"
+  ]
+}

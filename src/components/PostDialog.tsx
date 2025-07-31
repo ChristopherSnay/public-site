@@ -63,7 +63,7 @@ export default function PostDialog(props: Readonly<PostDialogProps>) {
                                 </Typography>
 
                                 {post.blocks?.map((block, blockIndex) => (
-                                    <PostBlock key={blockIndex} block={block} />
+                                    <PostBlock index={blockIndex} block={block} />
 
                                 ))}
                             </div>

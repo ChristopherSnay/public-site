@@ -5,14 +5,15 @@ import type { PostBlock } from "../models/PostBlock";
 export default function PostBlock(props: Readonly<PostBlockProps>) {
     const { localImage } = useImageLinks();
     switch (props.block.blockType) {
-        case 1:
-            return <p key={props.key}>{props.block.content}</p>
-        case 2:
-            return <Box key={props.key}
+        case 1: // Paragraph
+            return <p>{props.block.content}</p>
+        case 2: // Image
+            return <Box
                 component="img"
                 src={localImage(props.block.content)}
+                className="py-4"
                 sx={{
-                    borderRadius: 1,
+                    borderRadius: 2,
                     display: 'block',
                     width: '100%',
                     maxWidth: {
@@ -22,14 +23,16 @@ export default function PostBlock(props: Readonly<PostBlockProps>) {
                         lg: 500
                     },
                     margin: 'auto',
-                    marginBottom: '1rem'
+                    boxShadow: 'inherit'
                 }} />;
-        case 3:
-            return <Paper key={props.key} component="div" elevation={0} className="p-1" >
-                <Typography component="pre" color="primary" sx={{
-                    fontFamily: 'monospace',
-                }}>{props.block.content}</Typography>
-            </Paper>
+        case 3: // Code 
+            return <div className="py-4">
+                <Paper component="div" elevation={0} className="p-2 border rounded border-1 border-info" >
+                    <Typography component="pre" color="primary" sx={{
+                        fontFamily: 'monospace',
+                    }}>{props.block.content}</Typography>
+                </Paper>
+            </div>
 
         default:
             return (
@@ -39,6 +42,6 @@ export default function PostBlock(props: Readonly<PostBlockProps>) {
 }
 
 interface PostBlockProps {
-    key: number;
+    index: number;
     block: PostBlock;
 }

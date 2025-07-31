@@ -1,0 +1,14 @@
+{
+    "title": "Check When Active Directory Password Expires",
+    "date": "2024-06-25",
+    "image": "sysadmin-password.png",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "net user /domain <username> | findstr /i expires"
+        }
+    ],
+    "tags": [
+        "sysadmin"
+    ]
+}

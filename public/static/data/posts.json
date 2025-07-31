@@ -11,14 +11,14 @@
             }
         ],
         "tags": [
-            "updates",
-            "code"
+            "code",
+            "hobby"
         ]
     },
     {
         "id": 3,
         "title": "Remove EFI System Partition From a Hard Drive",
-        "date": "2025-07-30",
+        "date": "2025-07-29",
         "image": "sysadmin.png",
         "blocks": [
             {
@@ -27,8 +27,7 @@
             }
         ],
         "tags": [
-            "updates",
-            "code"
+            "sysadmin"
         ]
     },
     {
@@ -43,63 +42,14 @@
             }
         ],
         "tags": [
-            "updates",
             "sysadmin"
-        ]
-    },
-    {
-        "id": 5,
-        "title": "Home Dashboard",
-        "date": "2024-05-17",
-        "image": "dash_001.jpg",
-        "blocks": [
-            {
-                "blockType": 1,
-                "content": "I've updated the touchscreen dashboard to have larger buttons, and I've completed the Hydrawise Sprinkler integration. Everything is fully functional now!"
-            },
-            {
-                "blockType": 2,
-                "content": "dash_001.jpg"
-            },
-            {
-                "blockType": 2,
-                "content": "dash_002.jpg"
-            },
-            {
-                "blockType": 2,
-                "content": "dash_003.jpg"
-            },
-            {
-                "blockType": 2,
-                "content": "dash_004.jpg"
-            },
-            {
-                "blockType": 2,
-                "content": "dash_005.jpg"
-            },
-            {
-                "blockType": 2,
-                "content": "dash_006.jpg"
-            },
-            {
-                "blockType": 2,
-                "content": "dash_007.jpg"
-            },
-            {
-                "blockType": 2,
-                "content": "dash_008.jpg"
-            }
-        ],
-        "tags": [
-            "updates",
-            "misc"
         ]
     },
     {
         "id": 6,
         "title": "Repeat an Observable in Angular (rxjs)",
         "date": "1/22/2024",
-        "image": "",
+        "image": "post.1.png",
         "blocks": [
             {
                 "content": "interval(1000).subscribe(() => {\n\tthis._getLatest().subscribe(latest => {\n\t});\n});",
@@ -107,9 +57,110 @@
             }
         ],
         "tags": [
-            "updates",
             "code",
             "angular"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Home Dashboard",
+        "date": "3/19/2024",
+        "image": "dash_001.jpg",
+        "blocks": [
+            {
+                "content": "This web application is hosted on my local IIS server and is displayed on a Raspberry Pi w/ touchscreen. It’s 100% custom, using Angular Material with a dotnet backend. It communicates with several IoT APIs, including:",
+                "blockType": 1
+            },
+            {
+                "content": "- Philips Hue\n- Samsung SmartThings\n- Hydrawise\n- OpenMeteo\n- Roku",
+                "blockType": 3
+            },
+            {
+                "content": "dash_001.jpg",
+                "blockType": 2
+            },
+            {
+                "content": "dash_002.jpg",
+                "blockType": 2
+            },
+            {
+                "content": "dash_003.jpg",
+                "blockType": 2
+            },
+            {
+                "content": "dash_004.jpg",
+                "blockType": 2
+            },
+            {
+                "content": "dash_005.jpg",
+                "blockType": 2
+            },
+            {
+                "content": "dash_006.jpg",
+                "blockType": 2
+            },
+            {
+                "content": "dash_007.jpg",
+                "blockType": 2
+            },
+            {
+                "content": "dash_008.jpg",
+                "blockType": 2
+            }
+        ],
+        "tags": [
+            "hobby",
+            "raspberrypi"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Lego Deals",
+        "date": "1/1/2024",
+        "image": "legodeals_001.jpg",
+        "blocks": [
+            {
+                "content": "This application displays the current prices of Lego sets at major retailers. Every hour, a scheduled task scrapes 29 retailer websites for their discounted Lego sets, and those prices are saved to a database. I started collecting the hourly price history in December 2022 and it continues to run today. I'm able to set alerts via Telegram when the price of a particular set drops below a given threshold. The application also keeps track of which sets I already own, which ones I am interested in, and which ones I never want to see. I can switch to a view that only shows sets I care about.",
+                "blockType": 1
+            },
+            {
+                "content": "Lego set details, like number of pieces, are pulled from Rebrickable's daily dataset. Once per day, a scheduled task downloads the latest Rebrickable dataset and adds the new entries to my database. MSRP is scraped from the Lego website and the BestBuy API. BestBuy has the best API of all the retailers. And it's FREE!",
+                "blockType": 1
+            },
+            {
+                "content": "Another page in the application displays Ebay buy-it-now, free shipping listings. Due to inconsistency with Ebay data, these prices are not tracked in my database. Ebay deals are displayed on a totally separate page from the retailer listings; however, the Ebay page can be filtered by the same criteria.",
+                "blockType": 1
+            },
+            {
+                "content": "The backend, dotnet API and Angular application are hosted on a local IIS server. Several scheduled tasks, like MSRP updates, Rebrickable datasets, alerts, etc. run on the same server. The MySQL database is hosted on Bluehost.",
+                "blockType": 1
+            },
+            {
+                "content": "legodeals_001.jpg",
+                "blockType": 2
+            },
+            {
+                "content": "legodeals_002.jpg",
+                "blockType": 2
+            }
+        ],
+        "tags": [
+            "hobby"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Insert into a SQL table that only has auto-generated Columns",
+        "date": "12/5/2023",
+        "image": "",
+        "blocks": [
+            {
+                "content": "INSERT INTO table_name DEFAULT VALUES",
+                "blockType": 3
+            }
+        ],
+        "tags": [
+            "sql"
         ]
     }
 ]

@@ -1,6 +1,6 @@
-import { AppBar, Box, Button, Container, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, Container, Link, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link as RouterLink } from "react-router-dom";
 import ContactDialog from "./components/ContactDialog";
 
 function App() {
@@ -10,9 +10,10 @@ function App() {
     <>
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar>
-          <Typography variant="h6" color="inherit" component="div" className="flex-grow-1">
+          <Link variant="h6" component={RouterLink}
+            to="/" underline="none" color="inherit" className="me-auto">
             christophersnay.com
-          </Typography>
+          </Link>
           <Button variant="outlined" onClick={() => setShowContactDialog(true)}>Contact</Button>
         </Toolbar>
       </AppBar>

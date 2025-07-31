@@ -1,0 +1,34 @@
+{
+    "title": "Lego Deals",
+    "date": "1/1/2024",
+    "image": "legodeals_001.jpg",
+    "blocks": [
+        {
+            "content": "This application displays the current prices of Lego sets at major retailers. Every hour, a scheduled task scrapes 29 retailer websites for their discounted Lego sets, and those prices are saved to a database. I started collecting the hourly price history in December 2022 and it continues to run today. I'm able to set alerts via Telegram when the price of a particular set drops below a given threshold. The application also keeps track of which sets I already own, which ones I am interested in, and which ones I never want to see. I can switch to a view that only shows sets I care about.",
+            "blockType": 1
+        },
+        {
+            "content": "Lego set details, like number of pieces, are pulled from Rebrickable's daily dataset. Once per day, a scheduled task downloads the latest Rebrickable dataset and adds the new entries to my database. MSRP is scraped from the Lego website and the BestBuy API. BestBuy has the best API of all the retailers. And it's FREE!",
+            "blockType": 1
+        },
+        {
+            "content": "Another page in the application displays Ebay buy-it-now, free shipping listings. Due to inconsistency with Ebay data, these prices are not tracked in my database. Ebay deals are displayed on a totally separate page from the retailer listings; however, the Ebay page can be filtered by the same criteria.",
+            "blockType": 1
+        },
+        {
+            "content": "The backend, dotnet API and Angular application are hosted on a local IIS server. Several scheduled tasks, like MSRP updates, Rebrickable datasets, alerts, etc. run on the same server. The MySQL database is hosted on Bluehost.",
+            "blockType": 1
+        },
+        {
+            "content": "legodeals_001.jpg",
+            "blockType": 2
+        },
+        {
+            "content": "legodeals_002.jpg",
+            "blockType": 2
+        }
+    ],
+    "tags": [
+        "hobby"
+    ]
+}

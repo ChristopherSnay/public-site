@@ -1,0 +1,15 @@
+{
+  "title": "Display enums as strings in Swagger/Swashbuckle",
+  "date": "5/18/2023",
+  "image": "",
+  "blocks": [
+    {
+      "content": "// Program.cs\n\nbuilder.Services.AddControllers().AddJsonOptions(opt => \n{\n\topt.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());\n});",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "angular",
+    "code"
+  ]
+}

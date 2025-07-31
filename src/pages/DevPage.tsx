@@ -1,10 +1,11 @@
 import { Button, TextField } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DynamicFieldGroup from "../components/DynamicFormGroup";
 import DynamicObjectFieldGroup from "../components/DynamicObjectFormGroup";
 import usePosts from "../hooks/usePosts";
 import type { Post } from "../models/Post";
 import type { PostBlock } from "../models/PostBlock";
+import { getPostsV2 } from "../services/postService";
 
 export default function DevPage() {
     const [tagFields, setTagFields] = useState([""]);
@@ -14,7 +15,21 @@ export default function DevPage() {
     const [featuredImage, setFeaturedImage] = useState<string>('');
     const { posts } = usePosts();
 
+    // const handleSubmitClick = () => {
+    //     const post: Post = {
+    //         id: Math.max(...posts.map(x => x.id)) + 1,
+    //         title: postTitle,
+    //         date: postDate,
+    //         image: featuredImage,
+    //         blocks: blockFields,
+    //         tags: tagFields
+    //     }
+
+    //     console.debug(post)
+    // }
+
     const handleSubmitClick = () => {
+        console.debug(posts);
         const post: Post = {
             id: Math.max(...posts.map(x => x.id)) + 1,
             title: postTitle,
@@ -22,10 +37,26 @@ export default function DevPage() {
             image: featuredImage,
             blocks: blockFields,
             tags: tagFields
-        }
+        };
 
-        console.debug(post)
-    }
+        const json = JSON.stringify(post, null, 2); // pretty-print for readability
+        const blob = new Blob([json], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${post.id}.json`; // filename
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url); // cleanup
+
+        console.debug('Downloaded:', post);
+    };
+
+    useEffect(() => {
+        getPostsV2().then(response => console.debug(response));
+    }, []);
 
     return (
         <section className="container">

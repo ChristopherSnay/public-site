@@ -1,0 +1,14 @@
+{
+    "title": "New Website Framework",
+    "date": "2025-07-30",
+    "image": "splash-bg.jpg",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "Due to the rising cost of simple shared hosting (BlueHost), I've written my own lightweight implementation of WordPress from scratch in React and hosted it on GitHub Pages."
+        }
+    ],
+    "tags": [
+        "hobby"
+    ]
+}

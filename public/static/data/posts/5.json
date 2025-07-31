@@ -1,0 +1,51 @@
+{
+    "title": "Home Dashboard",
+    "date": "3/19/2024",
+    "image": "dash_001.jpg",
+    "blocks": [
+        {
+            "content": "This web application is hosted on my local IIS server and is displayed on a Raspberry Pi w/ touchscreen. It’s 100% custom, using Angular Material with a dotnet backend. It communicates with several IoT APIs, including:",
+            "blockType": 1
+        },
+        {
+            "content": "- Philips Hue\n- Samsung SmartThings\n- Hydrawise\n- OpenMeteo\n- Roku",
+            "blockType": 3
+        },
+        {
+            "content": "dash_001.jpg",
+            "blockType": 2
+        },
+        {
+            "content": "dash_002.jpg",
+            "blockType": 2
+        },
+        {
+            "content": "dash_003.jpg",
+            "blockType": 2
+        },
+        {
+            "content": "dash_004.jpg",
+            "blockType": 2
+        },
+        {
+            "content": "dash_005.jpg",
+            "blockType": 2
+        },
+        {
+            "content": "dash_006.jpg",
+            "blockType": 2
+        },
+        {
+            "content": "dash_007.jpg",
+            "blockType": 2
+        },
+        {
+            "content": "dash_008.jpg",
+            "blockType": 2
+        }
+    ],
+    "tags": [
+        "hobby",
+        "raspberrypi"
+    ]
+}
