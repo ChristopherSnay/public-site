@@ -2,6 +2,7 @@ import { Avatar, Box, Paper, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PostBlock from "../components/PostBlock";
+import { CONFIG } from "../constants/config";
 import { useDates } from "../hooks/useDates";
 import useImageLinks from "../hooks/useImageLinks";
 import usePosts from "../hooks/usePosts";
@@ -29,18 +30,19 @@ export default function PostPage() {
         <>
             {post && (
                 <>
-                    {post.image && (
-                        <Box component="img"
-                            src={localImage(post.image)}
-                            sx={{
-                                borderRadius: 1,
-                                display: 'block',
-                                width: '100%',
-                                maxHeight: 200,
-                                objectFit: 'cover',
-                                margin: 'auto'
-                            }} />
-                    )}
+                    <Box component="img"
+                        src={post.image
+                            ? localImage(post.image)
+                            : localImage(CONFIG.DEFAULT_IMAGE)}
+                        sx={{
+                            borderRadius: 1,
+                            display: 'block',
+                            width: '100%',
+                            maxHeight: 200,
+                            objectFit: 'cover',
+                            margin: 'auto'
+                        }} />
+
                     <div className="container">
                         <div className="row justify-content-center">
                             <Paper elevation={0} className="col-md-8 px-4">

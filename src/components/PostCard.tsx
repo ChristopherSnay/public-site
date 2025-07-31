@@ -1,4 +1,5 @@
 import { Avatar, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { CONFIG } from "../constants/config";
 import { useDates } from "../hooks/useDates";
 import useImageLinks from "../hooks/useImageLinks";
 import type { Post } from "../models/Post";
@@ -10,12 +11,14 @@ export default function PostCard(props: Readonly<PostCardProps>) {
     return (
         <Card>
             <CardActionArea onClick={() => props.onPostClick(props.post.id)}>
-                {props.post.image && (<CardMedia
+                <CardMedia
                     component="img"
                     height="194"
-                    image={localImage(props.post.image)}
-                    alt="Paella dish"
-                />)}
+                    alt={props.post.title}
+                    image={props.post.image
+                        ? localImage(props.post.image)
+                        : localImage(CONFIG.DEFAULT_IMAGE)}
+                />
 
                 <CardContent>
                     <Typography variant="overline">{props.post.tags.join(', ').toUpperCase()}</Typography>
