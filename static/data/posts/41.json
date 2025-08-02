@@ -1,0 +1,15 @@
+{
+    "title": "Remove Amazon Integration from Ubuntu",
+    "date": "2020-03-03",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "sudo rm /usr/share/applications/ubuntu-amazon-default.desktop\nsudo rm /usr/share/ubuntu-web-launchers/amazon-launcher"
+        }
+    ],
+    "tags": [
+        "linux",
+        "sysadmin"
+    ]
+}

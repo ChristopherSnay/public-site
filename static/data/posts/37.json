@@ -1,0 +1,14 @@
+{
+    "title": "Display total lines of code in a git branch",
+    "date": "2020-01-08",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "// where the hex are commit id's to differentiate\ngit diff 5cec833a 4ef01d13 --stat"
+        }
+    ],
+    "tags": [
+        "git"
+    ]
+}

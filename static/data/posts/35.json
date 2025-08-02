@@ -1,0 +1,15 @@
+{
+    "title": "Serialize enum as string",
+    "date": "2019-11-08",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "[JsonConverter(typeof(StringEnumConverter))]"
+        }
+    ],
+    "tags": [
+        "c#",
+        "code"
+    ]
+}

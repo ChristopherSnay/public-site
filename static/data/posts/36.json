@@ -1,0 +1,15 @@
+{
+    "title": "Windows GAC location",
+    "date": "2019-11-08",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "C:\\Windows\\Microsoft.NET\\assembly"
+        }
+    ],
+    "tags": [
+        "sysadmin",
+        "gac"
+    ]
+}

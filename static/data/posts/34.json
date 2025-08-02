@@ -1,0 +1,14 @@
+{
+    "title": "Change git author name",
+    "date": "2019-10-29",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "git config --global user.name \"Christopher Snay\""
+        }
+    ],
+    "tags": [
+        "git"
+    ]
+}

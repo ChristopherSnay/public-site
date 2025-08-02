@@ -1,0 +1,16 @@
+{
+    "title": "Get Windows AD Groups for user (PowerShell)",
+    "date": "2021-04-27",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "(&#91;ADSISEARCHER]\"samaccountname=$($env:USERNAME)\").Findone().Properties.memberof -replace '^CN=(&#91;^,]+).+$','$1'"
+        }
+    ],
+    "tags": [
+        "powershell",
+        "sysadmin",
+        "windows"
+    ]
+}

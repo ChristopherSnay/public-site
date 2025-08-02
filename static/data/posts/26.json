@@ -1,0 +1,14 @@
+{
+    "title": "Install Logstash plugins",
+    "date": "2019-04-23",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "logstasn\\bin\\logstash-plugin install json-filter"
+        }
+    ],
+    "tags": [
+        "elasticsearch"
+    ]
+}

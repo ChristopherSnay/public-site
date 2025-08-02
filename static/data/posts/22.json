@@ -1,0 +1,23 @@
+{
+    "title": "Compare 2 Files with Visual Studio",
+    "date": "2019-02-08",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "// open cmd\n&lt;path to Visual Studio\\Common7\\IDE>devenv /diff file1 file2"
+        },
+        {
+            "blockType": 1,
+            "content": "Or just create a batch file. Example:"
+        },
+        {
+            "blockType": 3,
+            "content": "@echo off\necho Drag and drop the first file onto this window. Then press [ENTER]\nset /p file1=\necho Drag and drop the second file onto this window. Then press [ENTER]\nset /p file2=\n\"C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\Common7\\IDE\\devenv.exe\" /diff %file1% %file2%"
+        }
+    ],
+    "tags": [
+        "code",
+        "sysadmin"
+    ]
+}
