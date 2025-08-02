@@ -1,7 +1,7 @@
 import { FirstPage, NavigateNext } from '@mui/icons-material';
 import { Chip, IconButton, Pagination, Tooltip } from "@mui/material";
 import { useMemo, useState, type ReactElement } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { CONFIG } from "../constants/config";
 import usePosts from "../hooks/usePosts";
 import useTags from "../hooks/useTags";
@@ -10,14 +10,26 @@ import PostCard from "./PostCard";
 import PostDialog from "./PostDialog";
 
 export default function PostGrid() {
-    const [selectedTag, setSelectedTag] = useState<string>('all');
     const [showPostDialog, setShowPostDialog] = useState<number | null>(null);
-    const [page, setPage] = useState<number>(1);
     const [showMoreTags, setShowMoreTags] = useState<boolean>(false);
     const [showAllTags, setShowAllTags] = useState<boolean>(false);
     const { posts } = usePosts();
     const { tags } = useTags();
+    const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
+
+    const page = Number(searchParams.get('page')) > 0
+        ? Number(searchParams.get('page'))
+        : 1;
+    const tag = searchParams.get('tag') || 'all';
+
+    const setPage = (value: number) => {
+        setSearchParams({ ...Object.fromEntries(searchParams.entries()), page: value.toString() });
+    };
+
+    const setTag = (tag: string) => {
+        setSearchParams({ ...Object.fromEntries(searchParams.entries()), tag: tag, page: '1' });
+    };
 
     const handlePostClick = (postId: number) => {
         navigate(`/post/${postId}`);
@@ -56,12 +68,12 @@ export default function PostGrid() {
     }, [filteredTags]);
 
     const filteredPosts = useMemo<Post[]>(() => {
-        return selectedTag == 'all'
+        return tag == 'all'
             ? posts
             : posts.filter(post =>
-                post.tags.includes(selectedTag)
+                post.tags.includes(tag)
             );
-    }, [posts, selectedTag]);
+    }, [posts, tag]);
 
     const paginatedPosts = useMemo(() => {
         const startIndex = (page - 1) * CONFIG.PAGE_SIZE;
@@ -71,10 +83,10 @@ export default function PostGrid() {
     return (
         <section className="d-flex flex-column w-100">
             <div className="container d-flex flex-wrap p-3 gap-2">
-                {filteredTags.map((tag, tagIndex) => (
-                    <Chip key={tagIndex} label={tag} clickable
-                        color={selectedTag == tag ? 'primary' : 'default'}
-                        onClick={() => setSelectedTag(tag)} />
+                {filteredTags.map((t, tagIndex) => (
+                    <Chip key={tagIndex} label={t} clickable
+                        color={t == tag ? 'primary' : 'default'}
+                        onClick={() => setTag(t)} />
                 ))}
                 <Tooltip title={showAllTags ? 'less' : 'more'}>
                     <IconButton size="small" onClick={handleMoreTagsClick}>
@@ -93,12 +105,10 @@ export default function PostGrid() {
                 </div>
             </div>
 
-            {paginatedPosts?.length > 0 && (
-                <Pagination className="align-self-center my-4"
-                    count={Math.ceil(filteredPosts.length / CONFIG.PAGE_SIZE)}
-                    page={page}
-                    onChange={(_e, value: number) => setPage(value)} />
-            )}
+            <Pagination className="align-self-center my-4"
+                count={Math.ceil(filteredPosts.length / CONFIG.PAGE_SIZE)}
+                page={page}
+                onChange={(_e, value: number) => setPage(value)} />
 
             <PostDialog id={showPostDialog ?? 0} open={!!showPostDialog}
                 onClose={() => setShowPostDialog(null)} />
