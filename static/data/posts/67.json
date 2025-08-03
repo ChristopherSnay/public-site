@@ -1,0 +1,33 @@
+{
+    "id": 67,
+    "title": "Another Cooking Game",
+    "date": "2015-07-13",
+    "image": "cooking_001.png",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "A Prototype in Unreal Engine 4."
+        },
+        {
+            "blockType": 1,
+            "content": "Built as a hobby project while exploring Unreal Engine 4, Another Cooking Game is a drag-and-drop cooking simulation that lets players assemble ingredients and prepare dishes in a playful, interactive environment."
+        },
+        {
+            "blockType": 1,
+            "content": "The prototype focuses on intuitive mechanics — players select ingredients, drag them into cooking zones, and trigger simple animations to simulate the cooking process. While minimal in scope, the project was a hands-on introduction to Unreal's Blueprint system, physics interactions, and UI layering."
+        },
+        {
+            "blockType": 1,
+            "content": "It's a small experiment, but one that sparked ideas for more immersive gameplay and deeper simulation mechanics down the line."
+        },
+        {
+            "blockType": 2,
+            "content": "cooking_001.png"
+        }
+    ],
+    "tags": [
+        "c#",
+        "hobby",
+        "unreal"
+    ]
+}

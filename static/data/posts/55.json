@@ -1,0 +1,23 @@
+{
+    "id": 55,
+    "title": "Modify class and interface templates in Visual Studio 2019",
+    "date": "2021-11-01",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "Nav to C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\ItemTemplates\\CSharp\\Code\\1033"
+        },
+        {
+            "blockType": 1,
+            "content": "Open Class, or Interface directory"
+        },
+        {
+            "blockType": 1,
+            "content": "Modify Class.cs or Interface.cs with preferred template"
+        }
+    ],
+    "tags": [
+        "visualstudio"
+    ]
+}

@@ -5,7 +5,15 @@
     "blocks": [
         {
             "blockType": 1,
-            "content": "A website for Lisbon residents to check which week is their recycling week. It uses Google Maps API."
+            "content": "A Simple Utility for Lisbon Residents."
+        },
+        {
+            "blockType": 1,
+            "content": "This lightweight website was built to help residents of Lisbon, Connecticut quickly check whether it's their recycling week — no digging through calendars or PDFs required. With a clean interface and location-aware features powered by the Google Maps API, users can easily find their recycling schedule and stay informed."
+        },
+        {
+            "blockType": 1,
+            "content": "The site is designed for clarity and speed, offering a no-frills experience that gets straight to the point. Whether you're checking from your phone or desktop, it’s a practical tool that makes local life just a little more convenient."
         },
         {
             "blockType": 4,

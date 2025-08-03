@@ -4,19 +4,39 @@
     "image": "legodeals_001.jpg",
     "blocks": [
         {
-            "content": "This application displays the current prices of Lego sets at major retailers. Every hour, a scheduled task scrapes 29 retailer websites for their discounted Lego sets, and those prices are saved to a database. I started collecting the hourly price history in December 2022 and it continues to run today. I'm able to set alerts via Telegram when the price of a particular set drops below a given threshold. The application also keeps track of which sets I already own, which ones I am interested in, and which ones I never want to see. I can switch to a view that only shows sets I care about.",
+            "content": "Lego Price Tracker — Real-Time Deal Monitoring & Alerts.",
             "blockType": 1
         },
         {
-            "content": "Lego set details, like number of pieces, are pulled from Rebrickable's daily dataset. Once per day, a scheduled task downloads the latest Rebrickable dataset and adds the new entries to my database. MSRP is scraped from the Lego website and the BestBuy API. BestBuy has the best API of all the retailers. And it's FREE!",
+            "content": "This custom web application tracks discounted Lego sets across 29 major retailers, scraping prices hourly and storing them in a MySQL database. Since December 2022, it’s been collecting historical pricing data and continues to run today.",
             "blockType": 1
         },
         {
-            "content": "Another page in the application displays Ebay buy-it-now, free shipping listings. Due to inconsistency with Ebay data, these prices are not tracked in my database. Ebay deals are displayed on a totally separate page from the retailer listings; however, the Ebay page can be filtered by the same criteria.",
+            "content": "Key features include:",
             "blockType": 1
         },
         {
-            "content": "The backend, dotnet API and Angular application are hosted on a local IIS server. Several scheduled tasks, like MSRP updates, Rebrickable datasets, alerts, etc. run on the same server. The MySQL database is hosted on Bluehost.",
+            "content": "🔔 Telegram Alerts for price drops below user-defined thresholds.",
+            "blockType": 1
+        },
+        {
+            "content": "🧩 Personalized Views: filter by owned sets, wishlist items, or exclude unwanted sets.",
+            "blockType": 1
+        },
+        {
+            "content": "📦 Daily Sync with Rebrickable's dataset for set details like piece count.",
+            "blockType": 1
+        },
+        {
+            "content": "🏷️ MSRP Updates via scraping from Lego.com and the BestBuy API (which is impressively free and reliable).",
+            "blockType": 1
+        },
+        {
+            "content": "🛒 eBay Listings: buy-it-now, free shipping deals shown on a separate page with shared filters (not tracked due to data inconsistency).",
+            "blockType": 1
+        },
+        {
+            "content": "The backend is powered by a .NET API and Angular frontend, hosted on a local IIS server. Scheduled tasks — including MSRP updates, Rebrickable syncs, and alert dispatches — run on the same server. The database is hosted on Bluehost.",
             "blockType": 1
         },
         {

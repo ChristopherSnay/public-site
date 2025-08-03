@@ -1,0 +1,25 @@
+{
+    "id": 65,
+    "title": "Poker and Blackjack",
+    "date": "2017-02-15",
+    "image": "poker_001.png",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "A poker and blackjack game created in Unity with C#"
+        },
+        {
+            "blockType": 2,
+            "content": "poker_001.png"
+        },
+        {
+            "blockType": 2,
+            "content": "poker_002.png"
+        }
+    ],
+    "tags": [
+        "c#",
+        "hobby",
+        "unity"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "id": 71,
+    "title": "Shift",
+    "date": "2014-01-03",
+    "image": "shift_001.png",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "Smart Scheduling for Everyday Life."
+        },
+        {
+            "blockType": 1,
+            "content": "Shift is an Android app my friend and I developed in our spare time, eventually releasing an Alpha version on Google Play. The concept was simple but powerful: take your to-do list and intelligently slot each task into the open gaps in your calendar, creating a streamlined, automated daily schedule."
+        },
+        {
+            "blockType": 1,
+            "content": "Built with a focus on usability and time management, Shift aimed to reduce decision fatigue by helping users visualize their day and prioritize tasks without manual planning. It was a rewarding challenge in balancing calendar integration, task logic, and UI responsiveness — and a great collaborative experience from prototype to release."
+        },
+        {
+            "blockType": 1,
+            "content": "working prototype"
+        },
+        {
+            "blockType": 2,
+            "content": "shift_001.png"
+        }
+    ],
+    "tags": [
+        "android",
+        "hobby"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "id": 50,
+    "title": "Convert a DataTable into a List of field/value pairs",
+    "date": "2022-03-15",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "public static List&lt;Dictionary&lt;string, dynamic>> ToDict(this DataTable dt) \n{\n    var tableDict = new List&lt;Dictionary&lt;string, dynamic>>();\n\n    foreach (DataRow row in dt.Rows)\n    {\n        var rowDict = new Dictionary&lt;string, dynamic>();\n\n        foreach (DataColumn col in dt.Columns) \n        {\n            var fieldValue = row&#91;col].Equals(DBNull.Value)\n                ? null\n                : row&#91;col];\n\n            rowDict.Add(col.ColumnName, fieldValue);\n        }\n\n        tableDict.Add(rowDict);\n    }\n\n    return tableDict;\n}"
+        }
+    ],
+    "tags": [
+        "c#",
+        "code"
+    ]
+}

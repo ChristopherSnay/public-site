@@ -1,0 +1,23 @@
+{
+    "id": 62,
+    "title": "ssh key generation",
+    "date": "2018-11-29",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "ssh key generation to a specific directory"
+        },
+        {
+            "blockType": 3,
+            "content": "ssh-keygen\n// copy contents from C:\\Users\\&lt;&lt;&lt;me>>>\\.ssh\\id_rsa.pub\n// paste contents to: https://bitbucket.org/account/user/&lt;&lt;&lt;me>>>/ssh-keys/"
+        },
+        {
+            "blockType": 3,
+            "content": "ssh-keygen -f C:\\somepath\\filename"
+        }
+    ],
+    "tags": [
+        "git"
+    ]
+}
