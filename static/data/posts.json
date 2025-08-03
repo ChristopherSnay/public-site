@@ -68,8 +68,8 @@
         "image": "dash_001.jpg",
         "blocks": [
             {
-                "content": "Custom Smart Home Interface.",
-                "blockType": 1
+                "blockType": 1,
+                "content": "Custom Smart Home Interface."
             },
             {
                 "blockType": 1,
