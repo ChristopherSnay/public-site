@@ -1,0 +1,15 @@
+{
+    "id": 60,
+    "title": "Check raspberry pi temp",
+    "date": "2018-12-31",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "./opt/vc/bin/vcgencmd measure_temp"
+        }
+    ],
+    "tags": [
+        "raspberrypi"
+    ]
+}

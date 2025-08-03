@@ -1,0 +1,15 @@
+{
+    "id": 74,
+    "title": "Open Raspberry pi config UI",
+    "date": "2018-11-04",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "sudo raspi-config"
+        }
+    ],
+    "tags": [
+        "raspberrypi"
+    ]
+}

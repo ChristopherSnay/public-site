@@ -1,0 +1,17 @@
+{
+    "id": 53,
+    "title": "Set default value of a GUID field in Entity Framework Sqlite vs MsSql",
+    "date": "2022-10-20",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "protected override void OnModelCreating(ModelBuilder modelBuilder)\n{\n   modelBuidler.Entity&lt;MyEntity>(entity => \n      if (_settings.UseSql) \n      {\n         entity.Property(e => e.Id)\n            .HasColumnName(\"id\")\n            .HasDefaultValueSql(\"(newid())\");\n      }\n      else if (_settings.UseSqlite)\n      {\n         entity.Property(e => e.Id)\n            .HasColumnName(\"id\")\n            .HasDefaultValue(Guid.NewGuid());\n      }\n      ....\n}"
+        }
+    ],
+    "tags": [
+        "c#",
+        "entityframework",
+        "sqlite"
+    ]
+}

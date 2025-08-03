@@ -1,0 +1,16 @@
+{
+    "id": 56,
+    "title": "list all globally installed npm modules",
+    "date": "2019-08-28",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "npm ls -g --depth 0"
+        }
+    ],
+    "tags": [
+        "angular",
+        "npm"
+    ]
+}

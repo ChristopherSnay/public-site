@@ -1,9 +1,9 @@
 import { Box, Paper, Typography } from "@mui/material";
-import useImageLinks from "../hooks/useImageLinks";
+import useImages from "../hooks/useImages";
 import type { PostBlock } from "../models/PostBlock";
 
 export default function PostBlock(props: Readonly<PostBlockProps>) {
-    const { localImage } = useImageLinks();
+    const { localImage } = useImages();
     switch (props.block.blockType) {
         case 1: // Paragraph
             return <p>{props.block.content}</p>
@@ -33,7 +33,7 @@ export default function PostBlock(props: Readonly<PostBlockProps>) {
                     }}>{props.block.content}</Typography>
                 </Paper>
             </div>
-        case 4:
+        case 4: // Link
             return <a href={`https://${props.block.content}`} target="_blank">
                 {props.block.content}
             </a>

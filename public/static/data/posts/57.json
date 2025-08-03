@@ -1,0 +1,25 @@
+{
+    "id": 57,
+    "title": "Scaffold a MySql database from .NET Core",
+    "date": "2019-04-24",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "PM> Scaffold-DbContext \"server=IP.ADD.RE.SS;user=dbuser;password=dbpass;database=dbname\" MySql.Data.EntityFrameworkCore -o dbname -f"
+        },
+        {
+            "blockType": 1,
+            "content": "Requirement: Microsoft.EntityFrameworkCore.Tools"
+        },
+        {
+            "blockType": 1,
+            "content": "Different providers: MySql.Data.EntityFrameworkCoreMicrosoft.EntityFrameworkCore.SqlServer"
+        }
+    ],
+    "tags": [
+        "dotnet",
+        "entityframework",
+        "mysql"
+    ]
+}

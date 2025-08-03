@@ -1,0 +1,16 @@
+{
+  "id": 48,
+  "title": "Factory Pattern Using Reflection",
+  "date": "9/16/2019",
+  "image": "",
+  "blocks": [
+    {
+      "content": "// class implements IModelFactory -> IFactoryModel CreateInstance(string modelName)\n\nprivate Dictionary<string, Type> _availableTypes;\n\npublic ModelFactory() {\n    LoadTypes();\n}\n\npublic IFactoryModel CreateInstance(string modelName)\n{\n    Type t = GetTypeToCreate(modelName);\n    //NOTE: handle null here\n    return Activator.CreateInstance(t) as IFactoryModel;\n}\n\nprivate void LoadTypes() \n{\n    _availableTypes = new Dictionary<string, Type>();\n    Type[] assemblyTypes = Assembly.GetExecutingAssembly().GetTypes();\n\n    assemblyTypes.Where(x => x.GetInterface(typeof(IFactoryModel).ToString()) != null).ToList()\n        .ForEach(y => _availableTypes.add(y.Name.ToLower(), y));\n}\n\nprivate IFactoryModel GetTypeToCreate(string name)\n{\n    _availableTypes.TryGetValue(name, out Type t);\n    return t ?? null;\n}",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "code",
+    "c#"
+  ]
+}

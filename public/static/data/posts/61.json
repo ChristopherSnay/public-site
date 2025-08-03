@@ -1,0 +1,15 @@
+{
+    "id": 61,
+    "title": "install Google USB drivers",
+    "date": "2018-11-29",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 3,
+            "content": "// Android Studio\nTools > SDK Manager > Appearance &amp; Behavior > System Settings > Android SDK > SDK Tools (tab) > Google USB Driver (checkbox)"
+        }
+    ],
+    "tags": [
+        "android"
+    ]
+}

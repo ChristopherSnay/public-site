@@ -1,0 +1,17 @@
+{
+    "id": 52,
+    "title": "Prevent IIS From Sleeping",
+    "date": "2022-04-16",
+    "image": "",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "Open IIS ManagerApplication Pools > Right-click the App Pool > Advanced SettingsSet the following values:(General) Start Mode = AlwaysRunning(Process Model) Idle Time-out = 0(Process Model) Load User Profile = False(Recycling) Regular Time Interval = 0(Recycling) Specific Times - clear all values from the TimeSpan[] ArrayClick OK"
+        }
+    ],
+    "tags": [
+        "dotnet",
+        "iis",
+        "sysadmin"
+    ]
+}

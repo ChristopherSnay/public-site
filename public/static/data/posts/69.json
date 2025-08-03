@@ -1,0 +1,27 @@
+{
+    "id": 69,
+    "title": "Wedding Itinerary",
+    "date": "2015-02-04",
+    "image": "wedding_001.png",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "Android-Inspired Design for a Special Day."
+        },
+        {
+            "blockType": 1,
+            "content": "For my wedding party, I created a mobile-friendly website that mimics the look and feel of an Android ListView — a nod to my love for mobile UI design. Built with jQuery UI and the Google Maps API, the site offered guests a sleek itinerary, venue details, and interactive maps to help everyone stay on track and in the loop."
+        },
+        {
+            "blockType": 1,
+            "content": "The design was intentionally minimal and familiar, making it easy for guests to navigate on their phones without needing to download anything. It was a fun blend of personal creativity and practical utility — and a great excuse to sneak some tech into the celebration."
+        },
+        {
+            "blockType": 2,
+            "content": "wedding_001.png"
+        }
+    ],
+    "tags": [
+        "hobby"
+    ]
+}

@@ -3,14 +3,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import { Avatar, Box, Dialog, DialogContent, DialogTitle, IconButton, Paper, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useMemo } from "react";
 import { useDates } from '../hooks/useDates';
-import useImageLinks from '../hooks/useImageLinks';
+import useImages from '../hooks/useImages';
 import usePosts from "../hooks/usePosts";
 import type { Post } from "../models/Post";
 import PostBlock from './PostBlock';
 
 export default function PostDialog(props: Readonly<PostDialogProps>) {
     const { posts } = usePosts();
-    const { localImage } = useImageLinks();
+    const { localImage } = useImages();
     const { toLocalDate } = useDates();
     const isMobile = useMediaQuery(useTheme().breakpoints.down('sm'));
 

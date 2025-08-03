@@ -5,7 +5,15 @@
     "blocks": [
         {
             "blockType": 1,
-            "content": "A free Android app for Lisbon, Connecticut residents. It was mainly created to keep track of which week is your recycling week, but also includes the town's quarterly newsletter. It implements Google Maps API."
+            "content": "Local Convenience in Your Pocket Designed specifically for residents of Lisbon, Connecticut, Lisbon Recycling is a free Android app that simplifies one of life's small but persistent questions: Is this my recycling week? With a clean interface and intuitive scheduling system, the app helps users stay on top of their recycling calendar without digging through paperwork or town websites."
+        },
+        {
+            "blockType": 1,
+            "content": "Beyond scheduling, the app also includes the town’s quarterly newsletter, keeping users informed about local updates and events. Integration with the Google Maps API adds a layer of location awareness, helping residents find drop-off points and navigate town services with ease."
+        },
+        {
+            "blockType": 1,
+            "content": "This project was a practical exercise in community-focused design, combining utility with simplicity — and proving that even small apps can make a meaningful impact."
         },
         {
             "blockType": 2,

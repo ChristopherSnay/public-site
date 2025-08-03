@@ -4,14 +4,14 @@ import { useParams } from "react-router-dom";
 import PostBlock from "../components/PostBlock";
 import { CONFIG } from "../constants/config";
 import { useDates } from "../hooks/useDates";
-import useImageLinks from "../hooks/useImageLinks";
+import useImages from "../hooks/useImages";
 import usePosts from "../hooks/usePosts";
 import type { Post } from "../models/Post";
 
 export default function PostPage() {
     const [post, setPost] = useState<Post | null>(null);
     const { postId } = useParams();
-    const { localImage } = useImageLinks();
+    const { localImage } = useImages();
     const { toLocalDate } = useDates();
     const { getById } = usePosts();
 
@@ -67,7 +67,6 @@ export default function PostPage() {
 
                                 {post.blocks?.map((block, blockIndex) => (
                                     <PostBlock key={blockIndex} index={blockIndex} block={block} />
-
                                 ))}
                             </Paper>
 

@@ -1,10 +1,11 @@
 import { AppBar, Box, Button, Container, Link, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
-import { Outlet, Link as RouterLink } from "react-router-dom";
+import { Outlet, Link as RouterLink, useNavigate } from "react-router-dom";
 import ContactDialog from "./components/ContactDialog";
 
 function App() {
   const [showContactDialog, setShowContactDialog] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -14,7 +15,10 @@ function App() {
             to="/" underline="none" color="inherit" className="me-auto">
             christophersnay.com
           </Link>
-          <Button variant="outlined" onClick={() => setShowContactDialog(true)}>Contact</Button>
+          <div className="d-flex gap-1">
+            <Button variant="text" onClick={() => navigate('/education')}>Education</Button>
+            <Button variant="outlined" onClick={() => setShowContactDialog(true)}>Contact</Button>
+          </div>
         </Toolbar>
       </AppBar>
 

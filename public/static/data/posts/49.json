@@ -1,0 +1,16 @@
+{
+  "id": 49,
+  "title": "Repository is not clean. Please commit or stash any changes before updating.",
+  "date": "8/28/2019",
+  "image": "",
+  "blocks": [
+    {
+      "content": "ng update --all --allow-dirty",
+      "blockType": 3
+    }
+  ],
+  "tags": [
+    "angular",
+    "code"
+  ]
+}

@@ -1,11 +1,11 @@
 import { Avatar, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 import { CONFIG } from "../constants/config";
 import { useDates } from "../hooks/useDates";
-import useImageLinks from "../hooks/useImageLinks";
+import useImages from "../hooks/useImages";
 import type { Post } from "../models/Post";
 
 export default function PostCard(props: Readonly<PostCardProps>) {
-    const { localImage } = useImageLinks();
+    const { localImage } = useImages();
     const { toLocalDate } = useDates();
 
     return (

@@ -15,15 +15,19 @@ export default function usePosts() {
 
     }, [posts]);
 
-
-    useEffect(() => {
+    const refreshPosts = useCallback(() => {
         getPostsV2().then(response => {
             setPosts(response.sort((a: Post, b: Post) => new Date(a.date) < new Date(b.date) ? 1 : -1));
         });
     }, []);
 
+    useEffect(() => {
+        refreshPosts();
+    }, []);
+
     return {
         posts,
-        getById
+        getById,
+        refreshPosts
     }
 }

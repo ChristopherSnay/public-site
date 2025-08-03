@@ -13,7 +13,7 @@ export default function DevPage() {
     const [postTitle, setPostTitle] = useState<string>('');
     const [postDate, setPostDate] = useState<string>(new Date().toLocaleDateString());
     const [featuredImage, setFeaturedImage] = useState<string>('');
-    const { posts } = usePosts();
+    const { posts, refreshPosts } = usePosts();
 
     // const handleSubmitClick = () => {
     //     const post: Post = {
@@ -50,11 +50,12 @@ export default function DevPage() {
         link.click();
         document.body.removeChild(link);
         URL.revokeObjectURL(url); // cleanup
-
+        refreshPosts();
         console.debug('Downloaded:', post);
     };
 
     useEffect(() => {
+        console.debug('ok');
         getPostsV2().then(response => console.debug(response));
     }, []);
 

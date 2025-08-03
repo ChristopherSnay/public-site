@@ -8,6 +8,7 @@ import App from './App.tsx';
 import ProtectedRoute from './components/ProtectedRoute.tsx';
 import './index.scss';
 import DevPage from './pages/DevPage.tsx';
+import EducationPage from './pages/EducationPage.tsx';
 import MainPage from './pages/MainPage.tsx';
 import PostPage from './pages/PostPage.tsx';
 
@@ -29,6 +30,10 @@ const router = createHashRouter([
       {
         path: 'post/:postId',
         element: <PostPage />
+      },
+      {
+        path: 'education',
+        element: <EducationPage />
       },
       {
         path: 'dev',

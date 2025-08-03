@@ -1,0 +1,25 @@
+{
+    "id": 72,
+    "title": "Cooking Game",
+    "date": "2015-01-13",
+    "image": "cookinggame_001.png",
+    "blocks": [
+        {
+            "blockType": 1,
+            "content": "Cooking Game was an ambitious attempt to gamify the culinary process: players would select a recipe, identify the correct ingredients, and simulate cooking through interactive steps. Built entirely with native Android Studio UI components, the project was a deep dive into layout design, state management, and user interaction."
+        },
+        {
+            "blockType": 1,
+            "content": "While the gameplay didn't quite hit the mark — it lacked the spark to keep players engaged — the development journey was anything but wasted. It taught valuable lessons in user experience, flow control, and the importance of balancing mechanics with fun."
+        },
+        {
+            "blockType": 2,
+            "content": "cookinggame_001.png"
+        }
+    ],
+    "tags": [
+        "android",
+        "java",
+        "hobby"
+    ]
+}
