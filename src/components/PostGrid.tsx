@@ -82,7 +82,7 @@ export default function PostGrid() {
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, [location]);
+    }, [location?.search, location?.pathname]);
 
     return (
         <section className="d-flex flex-column w-100">
