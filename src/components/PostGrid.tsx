@@ -52,7 +52,7 @@ export default function PostGrid() {
         } else if (showMoreTags) {
             return tags.slice(0, 10);
         } else {
-            return tags.slice(0, 5);
+            return tags.slice(0, 4);
         }
 
     }, [tags, showMoreTags, showAllTags]);
