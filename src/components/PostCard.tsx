@@ -16,7 +16,7 @@ export default function PostCard(props: Readonly<PostCardProps>) {
     }, [props.post.image]);
 
     return (
-        <Card>
+        <Card className="border border-1 border-dark">
             <CardActionArea onClick={() => props.onPostClick(props.post.id)}>
                 <CardMedia
                     component="img"

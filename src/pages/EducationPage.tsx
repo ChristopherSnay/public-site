@@ -11,7 +11,7 @@ export default function EducationPage() {
             <div className="row g-3" >
                 {education.map((edu, index) => (
                     <div key={index} className="col-12 col-md-6">
-                        <Card>
+                        <Card className="border border-1 border-dark">
                             <CardContent className="d-flex">
                                 <CardMedia
                                     component="img"
