@@ -1,15 +1,10 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
-import { useEffect } from "react";
 import useEducation from "../hooks/useEducation";
 import useImages from "../hooks/useImages";
 
 export default function EducationPage() {
     const { education } = useEducation();
     const { localImage } = useImages();
-
-    useEffect(() => {
-
-    }, [])
 
     return (
         <section className="container my-5">

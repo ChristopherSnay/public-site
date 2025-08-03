@@ -1,22 +1,22 @@
 import { FirstPage, NavigateNext } from '@mui/icons-material';
 import { Chip, IconButton, Pagination, Tooltip } from "@mui/material";
-import { useMemo, useState, type ReactElement } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useEffect, useMemo, useState, type ReactElement } from "react";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { CONFIG } from "../constants/config";
 import usePosts from "../hooks/usePosts";
 import useTags from "../hooks/useTags";
 import type { Post } from "../models/Post";
 import PostCard from "./PostCard";
-import PostDialog from "./PostDialog";
 
 export default function PostGrid() {
-    const [showPostDialog, setShowPostDialog] = useState<number | null>(null);
     const [showMoreTags, setShowMoreTags] = useState<boolean>(false);
     const [showAllTags, setShowAllTags] = useState<boolean>(false);
+    const [searchParams, setSearchParams] = useSearchParams();
     const { posts } = usePosts();
     const { tags } = useTags();
-    const [searchParams, setSearchParams] = useSearchParams();
+
     const navigate = useNavigate();
+    const location = useLocation();
 
     const page = Number(searchParams.get('page')) > 0
         ? Number(searchParams.get('page'))
@@ -80,6 +80,10 @@ export default function PostGrid() {
         return filteredPosts.slice(startIndex, startIndex + CONFIG.PAGE_SIZE);
     }, [filteredPosts, page]);
 
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [location]);
+
     return (
         <section className="d-flex flex-column w-100">
             <div className="container d-flex flex-wrap p-3 gap-2">
@@ -109,9 +113,6 @@ export default function PostGrid() {
                 count={Math.ceil(filteredPosts.length / CONFIG.PAGE_SIZE)}
                 page={page}
                 onChange={(_e, value: number) => setPage(value)} />
-
-            <PostDialog id={showPostDialog ?? 0} open={!!showPostDialog}
-                onClose={() => setShowPostDialog(null)} />
         </section>
     )
 }

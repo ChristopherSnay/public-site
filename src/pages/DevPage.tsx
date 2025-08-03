@@ -15,19 +15,6 @@ export default function DevPage() {
     const [featuredImage, setFeaturedImage] = useState<string>('');
     const { posts, refreshPosts } = usePosts();
 
-    // const handleSubmitClick = () => {
-    //     const post: Post = {
-    //         id: Math.max(...posts.map(x => x.id)) + 1,
-    //         title: postTitle,
-    //         date: postDate,
-    //         image: featuredImage,
-    //         blocks: blockFields,
-    //         tags: tagFields
-    //     }
-
-    //     console.debug(post)
-    // }
-
     const handleSubmitClick = () => {
         console.debug(posts);
         const post: Post = {

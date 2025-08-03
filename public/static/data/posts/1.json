@@ -13,7 +13,11 @@
         },
         {
             "blockType": 1,
-            "content": "This project was a deep dive into static site generation, routing, and component-based architecture. It supports blog-style content, dynamic navigation, and responsive design, all without the overhead of traditional CMS platforms. It’s lean, scalable, and tailored to my exact needs — a satisfying blend of cost-efficiency and creative control."
+            "content": "This project was a deep dive into static site generation, routing, and component-based architecture. It supports blog-style content, dynamic navigation, and responsive design, all without the overhead of traditional CMS platforms. It's lean, scalable, and tailored to my exact needs — a satisfying blend of cost-efficiency and creative control."
+        },
+        {
+            "blockType": 1,
+            "content": "You're using it right now! This website is built with the same framework, showcasing its capabilities in real-time."
         }
     ],
     "tags": [

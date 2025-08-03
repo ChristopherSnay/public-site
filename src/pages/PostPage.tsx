@@ -1,9 +1,10 @@
-import { Avatar, Box, Paper, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { Box, Paper, Typography } from "@mui/material";
+import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
+import AuthorAvatar from "../components/AuthorAvatar";
 import PostBlock from "../components/PostBlock";
-import { CONFIG } from "../constants/config";
 import { useDates } from "../hooks/useDates";
+import useImageFilters from "../hooks/useImageFilters";
 import useImages from "../hooks/useImages";
 import usePosts from "../hooks/usePosts";
 import type { Post } from "../models/Post";
@@ -14,6 +15,11 @@ export default function PostPage() {
     const { localImage } = useImages();
     const { toLocalDate } = useDates();
     const { getById } = usePosts();
+    const { getRandomHue } = useImageFilters();
+
+    const hasImage = useMemo<boolean>(() => {
+        return !!post?.image && post.image.length > 0;
+    }, [post?.image]);
 
     useEffect(() => {
         const postIdNum = Number(postId);
@@ -31,9 +37,7 @@ export default function PostPage() {
             {post && (
                 <>
                     <Box component="img"
-                        src={post.image
-                            ? localImage(post.image)
-                            : localImage(CONFIG.DEFAULT_IMAGE)}
+                        src={localImage(post.image)}
                         sx={{
                             borderRadius: 1,
                             display: 'block',
@@ -41,17 +45,14 @@ export default function PostPage() {
                             maxHeight: 200,
                             objectFit: 'cover',
                             margin: 'auto'
-                        }} />
+                        }}
+                        style={hasImage ? {} : { filter: `hue-rotate(${getRandomHue(post.id, post.title)})` }} />
 
                     <div className="container">
                         <div className="row justify-content-center">
                             <Paper elevation={0} className="col-md-8 px-4">
-                                <div className="d-flex align-items-center py-3">
-                                    <Avatar variant="square">CS</Avatar>
-                                    <div className="d-flex flex-column ms-2">
-                                        <Typography variant="body1">Christopher Snay</Typography>
-                                        <Typography color="textSecondary" variant="caption">{toLocalDate(post.date)}</Typography>
-                                    </div>
+                                <div className="my-3">
+                                    <AuthorAvatar date={toLocalDate(post.date)} />
                                 </div>
 
                                 <hr className="m-0" />

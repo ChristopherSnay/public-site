@@ -1,12 +1,19 @@
-import { Avatar, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
-import { CONFIG } from "../constants/config";
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { useMemo } from "react";
 import { useDates } from "../hooks/useDates";
+import useImageFilters from "../hooks/useImageFilters";
 import useImages from "../hooks/useImages";
 import type { Post } from "../models/Post";
+import AuthorAvatar from "./AuthorAvatar";
 
 export default function PostCard(props: Readonly<PostCardProps>) {
     const { localImage } = useImages();
     const { toLocalDate } = useDates();
+    const { getRandomHue } = useImageFilters();
+
+    const hasImage = useMemo<boolean>(() => {
+        return !!props.post.image && props.post.image.length > 0;
+    }, [props.post.image]);
 
     return (
         <Card>
@@ -15,10 +22,8 @@ export default function PostCard(props: Readonly<PostCardProps>) {
                     component="img"
                     height="194"
                     alt={props.post.title}
-                    image={props.post.image
-                        ? localImage(props.post.image)
-                        : localImage(CONFIG.DEFAULT_IMAGE)}
-                />
+                    image={localImage(props.post.image)}
+                    style={hasImage ? {} : { filter: `hue-rotate(${getRandomHue(props.post.id, props.post.title)})` }} />
 
                 <CardContent>
                     <Typography variant="overline">{props.post.tags.join(', ').toUpperCase()}</Typography>
@@ -35,13 +40,7 @@ export default function PostCard(props: Readonly<PostCardProps>) {
 
                     {/* Card Footer */}
                     <div className="d-flex justify-content-between align-items-center mt-3">
-                        <div className="d-flex align-items-center" onClick={(e) => { e.preventDefault(); console.debug('ok') }}>
-                            <Avatar variant="square">CS</Avatar>
-                            <span className="ms-2">Christopher Snay</span>
-                        </div>
-                        <Typography variant="caption" className="align-items-end">
-                            {toLocalDate(props.post.date)}
-                        </Typography>
+                        <AuthorAvatar date={toLocalDate(props.post.date)} />
                     </div>
                 </CardContent>
             </CardActionArea>
