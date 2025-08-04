@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "positionTitle": "Software Engineer",
+    "company": "Travelers Insurance",
+    "location": "Hartford, CT",
+    "startDate": "2020-02-04",
+    "description": [
+        "Lead architect and developer for a suite of ~10 core applications, specializing in Angular, react, and modern .NET technologies. Responsible for driving end-to-end solution design, implementation, and technical leadership. Champion of coding standards and engineering best practices, ensuring scalable, maintainable, and high-quality software across teams."
+    ]
+}

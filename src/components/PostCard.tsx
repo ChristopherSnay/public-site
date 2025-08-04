@@ -8,7 +8,7 @@ import AuthorAvatar from "./AuthorAvatar";
 
 export default function PostCard(props: Readonly<PostCardProps>) {
     const { localImage } = useImages();
-    const { toLocalDate } = useDates();
+    const { localDate } = useDates();
     const { getRandomHue } = useImageFilters();
 
     const hasImage = useMemo<boolean>(() => {
@@ -40,7 +40,7 @@ export default function PostCard(props: Readonly<PostCardProps>) {
 
                     {/* Card Footer */}
                     <div className="d-flex justify-content-between align-items-center mt-3">
-                        <AuthorAvatar date={toLocalDate(props.post.date)} />
+                        <AuthorAvatar date={localDate(props.post.date)} />
                     </div>
                 </CardContent>
             </CardActionArea>

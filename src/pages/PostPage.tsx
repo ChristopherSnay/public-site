@@ -13,7 +13,7 @@ export default function PostPage() {
     const [post, setPost] = useState<Post | null>(null);
     const { postId } = useParams();
     const { localImage } = useImages();
-    const { toLocalDate } = useDates();
+    const { localDate } = useDates();
     const { getById } = usePosts();
     const { getRandomHue } = useImageFilters();
 
@@ -52,7 +52,7 @@ export default function PostPage() {
                         <div className="row justify-content-center">
                             <Paper elevation={0} className="col-md-8 px-4">
                                 <div className="my-3">
-                                    <AuthorAvatar date={toLocalDate(post.date)} />
+                                    <AuthorAvatar date={localDate(post.date)} />
                                 </div>
 
                                 <hr className="m-0" />

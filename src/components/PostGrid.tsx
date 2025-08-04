@@ -17,10 +17,6 @@ export default function PostGrid() {
 
     const navigate = useNavigate();
     const location = useLocation();
-
-    const page = Number(searchParams.get('page')) > 0
-        ? Number(searchParams.get('page'))
-        : 1;
     const tag = searchParams.get('tag') || 'all';
 
     const setPage = (value: number) => {
@@ -46,6 +42,14 @@ export default function PostGrid() {
         }
     }
 
+    const page = useMemo<number>(() => {
+        const pageParam = searchParams.get('page');
+        const pageNumber = Number(pageParam);
+        return pageNumber > 0
+            ? pageNumber
+            : 1;
+    }, [searchParams]);
+
     const filteredTags = useMemo<string[]>(() => {
         if (showAllTags) {
             return tags;
@@ -57,7 +61,7 @@ export default function PostGrid() {
 
     }, [tags, showMoreTags, showAllTags]);
 
-    const tagIcon = useMemo<ReactElement>(() => {
+    const moreTagsIcon = useMemo<ReactElement>(() => {
         if (showAllTags) {
             return <FirstPage />
         } else if (showMoreTags) {
@@ -65,7 +69,7 @@ export default function PostGrid() {
         } else {
             return <NavigateNext />
         }
-    }, [filteredTags]);
+    }, [showMoreTags, showAllTags]);
 
     const filteredPosts = useMemo<Post[]>(() => {
         return tag == 'all'
@@ -94,7 +98,7 @@ export default function PostGrid() {
                 ))}
                 <Tooltip title={showAllTags ? 'less' : 'more'}>
                     <IconButton size="small" onClick={handleMoreTagsClick}>
-                        {tagIcon}
+                        {moreTagsIcon}
                     </IconButton>
                 </Tooltip>
             </div>

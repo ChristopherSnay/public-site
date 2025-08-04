@@ -1,0 +1,11 @@
+{
+    "id": 2,
+    "positionTitle": "Software Engineer",
+    "company": "Selective Insurance",
+    "location": "Glastonbury, CT",
+    "startDate": "2019-02-01",
+    "endDate": "2020-01-01",
+    "description": [
+        "Led development for modernization of VB.NET Web Forms-based insurance quoting software. Spearheaded modernization efforts by refactoring legacy systems into scalable C# .NET Core Web APIs. Integrated third-party services using IBM Integration Bus (IIB) for robust data routing and orchestration."
+    ]
+}
