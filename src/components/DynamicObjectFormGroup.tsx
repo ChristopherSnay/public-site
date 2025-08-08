@@ -41,45 +41,66 @@ export default function DynamicObjectFieldGroup(props: Readonly<DynamicObjectFie
 
     return (
         <FormGroup>
-            <FormLabel component="legend" className="mb-3">{props.label}</FormLabel>
+            <FormLabel
+                component="legend"
+                className="mb-3">
+                {props.label}
+            </FormLabel>
             <Stack spacing={2}>
                 {props.values.map((value, index) => (
-                    <Box key={index} display="flex" alignItems="center" gap={1}>
+                    <Box key={index}
+                        display="flex"
+                        alignItems="center"
+                        gap={1}>
                         <TextField
-                            label={`${props.label.slice(0, -1)} ${index + 1}`}
+                            fullWidth
                             multiline
+                            label={`${props.label.slice(0, -1)} ${index + 1}`}
                             minRows={3}
                             value={value.content}
                             onChange={e => handleFieldChange(e.target.value, index)}
                             onKeyDown={(e: any) => handleKeyDown(e, index)}
-                            fullWidth
+
                         />
-                        <IconButton color="error"
+                        <IconButton
+                            color="error"
                             disabled={props.values.length === 1}
                             onClick={() => handleRemoveField(index)}>
                             <DeleteIcon />
                         </IconButton>
                     </Box>
                 ))}
-                <IconButton onClick={_ => setShowBlockTypeDialog(true)} color="primary" className="mx-auto my-2">
+                <IconButton
+                    color="primary"
+                    className="mx-auto my-2"
+                    onClick={_ => setShowBlockTypeDialog(true)}>
                     <AddIcon />
                 </IconButton>
             </Stack>
 
-            <Dialog maxWidth="md" open={showBlockTypeDialog} onClose={_ => setShowBlockTypeDialog(false)}>
+            <Dialog
+                maxWidth="md"
+                open={showBlockTypeDialog}
+                onClose={_ => setShowBlockTypeDialog(false)}>
                 <DialogTitle>
                     Block Type
                 </DialogTitle>
                 <DialogContent>
-                    <Select value={selectedBlockType} onChange={e => setSelectedBlockType(Number(e.target.value))}>
+                    <Select
+                        value={selectedBlockType}
+                        onChange={e => setSelectedBlockType(Number(e.target.value))}>
                         {Object.entries(BLOCK_TYPES).map(([key]) => (
                             <MenuItem value={key}>{BLOCK_TYPES[parseInt(key)]}</MenuItem>
                         ))}
                     </Select>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={_ => setShowBlockTypeDialog(false)}>Cancel</Button>
-                    <Button onClick={handleDialogClose}>Submit</Button>
+                    <Button onClick={_ => setShowBlockTypeDialog(false)}>
+                        Cancel
+                    </Button>
+                    <Button onClick={handleDialogClose}>
+                        Submit
+                    </Button>
                 </DialogActions>
             </Dialog>
         </FormGroup>

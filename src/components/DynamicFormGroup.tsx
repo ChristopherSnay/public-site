@@ -20,26 +20,34 @@ export default function DynamicFieldGroup(props: Readonly<DynamicFieldGroupProps
 
     return (
         <FormGroup>
-            <FormLabel component="legend" className="mb-3">{props.label}</FormLabel>
+            <FormLabel
+                component="legend"
+                className="mb-3">
+                {props.label}
+            </FormLabel>
             <Stack spacing={2}>
                 {props.values.map((value, index) => (
-                    <Box key={index} display="flex" alignItems="center" gap={1}>
+                    <Box key={index}
+                        display="flex"
+                        alignItems="center"
+                        gap={1}>
                         <TextField
+                            fullWidth
                             label={`${props.label.slice(0, -1)} ${index + 1}`}
                             value={value}
-                            onChange={e => handleFieldChange(index, e.target.value)}
-                            fullWidth
-                        />
+                            onChange={e => handleFieldChange(index, e.target.value)} />
                         <IconButton
-                            onClick={() => handleRemoveField(index)}
                             color="error"
                             disabled={props.values.length === 1}
-                        >
+                            onClick={() => handleRemoveField(index)}>
                             <DeleteIcon />
                         </IconButton>
                     </Box>
                 ))}
-                <IconButton onClick={handleAddField} color="primary" className="mx-auto my-2">
+                <IconButton
+                    color="primary"
+                    className="mx-auto my-2"
+                    onClick={handleAddField}>
                     <AddIcon />
                 </IconButton>
             </Stack>
