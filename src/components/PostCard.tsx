@@ -26,15 +26,23 @@ export default function PostCard(props: Readonly<PostCardProps>) {
                     style={hasImage ? {} : { filter: `hue-rotate(${getRandomHue(props.post.id, props.post.title)})` }} />
 
                 <CardContent>
-                    <Typography variant="overline">{props.post.tags.join(', ').toUpperCase()}</Typography>
-                    <Typography variant="h5" className="mb-2 mt-0">{props.post.title}</Typography>
-                    <Typography variant="body2" sx={{
-                        display: '-webkit-box',
-                        WebkitLineClamp: 3,
-                        WebkitBoxOrient: 'vertical',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis'
-                    }}>
+                    <Typography variant="overline">
+                        {props.post.tags.join(', ').toUpperCase()}
+                    </Typography>
+                    <Typography
+                        variant="h5"
+                        className="mb-2 mt-0">
+                        {props.post.title}
+                    </Typography>
+                    <Typography
+                        variant="body2"
+                        sx={{
+                            display: '-webkit-box',
+                            WebkitLineClamp: 3,
+                            WebkitBoxOrient: 'vertical',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis'
+                        }}>
                         {props.post.blocks?.[0]?.content}
                     </Typography>
 

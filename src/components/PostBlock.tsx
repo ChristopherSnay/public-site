@@ -27,14 +27,23 @@ export default function PostBlock(props: Readonly<PostBlockProps>) {
                 }} />;
         case 3: // Code 
             return <div className="py-4">
-                <Paper component="div" elevation={0} className="p-2 border rounded border-1 border-info" >
-                    <Typography component="pre" color="primary" sx={{
-                        fontFamily: 'monospace',
-                    }}>{props.block.content}</Typography>
+                <Paper
+                    component="div"
+                    elevation={0}
+                    className="p-2 border rounded border-1 border-info" >
+                    <Typography
+                        component="pre"
+                        color="primary" sx={{
+                            fontFamily: 'monospace',
+                        }}>
+                        {props.block.content}
+                    </Typography>
                 </Paper>
             </div>
         case 4: // Link
-            return <a href={`https://${props.block.content}`} target="_blank">
+            return <a
+                href={`https://${props.block.content}`}
+                target="_blank">
                 {props.block.content}
             </a>
 

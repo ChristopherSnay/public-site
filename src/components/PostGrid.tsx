@@ -92,12 +92,17 @@ export default function PostGrid() {
         <section className="d-flex flex-column w-100">
             <div className="container d-flex flex-wrap p-3 gap-2">
                 {filteredTags.map((t, tagIndex) => (
-                    <Chip key={tagIndex} label={t} clickable
+                    <Chip
+                        clickable
+                        key={tagIndex}
+                        label={t}
                         color={t == tag ? 'primary' : 'default'}
                         onClick={() => setTag(t)} />
                 ))}
                 <Tooltip title={showAllTags ? 'less' : 'more'}>
-                    <IconButton size="small" onClick={handleMoreTagsClick}>
+                    <IconButton
+                        size="small"
+                        onClick={handleMoreTagsClick}>
                         {moreTagsIcon}
                     </IconButton>
                 </Tooltip>
@@ -106,8 +111,12 @@ export default function PostGrid() {
             <div className="container">
                 <div className="row g-3">
                     {paginatedPosts.map((post, postIndex) => (
-                        <div key={postIndex} className="col-xl-4 col-md-6">
-                            <PostCard post={post} onPostClick={handlePostClick} />
+                        <div
+                            key={postIndex}
+                            className="col-xl-4 col-md-6">
+                            <PostCard
+                                post={post}
+                                onPostClick={handlePostClick} />
                         </div>
                     ))}
                 </div>
