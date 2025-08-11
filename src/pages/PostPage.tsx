@@ -1,25 +1,18 @@
-import { Box, Paper, Typography } from "@mui/material";
-import { useEffect, useMemo, useState } from "react";
+import { Paper, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AuthorAvatar from "../components/AuthorAvatar";
+import ImageBackdrop from "../components/ImageBackdrop";
 import PostBlock from "../components/PostBlock";
 import { useDates } from "../hooks/useDates";
-import useImageFilters from "../hooks/useImageFilters";
-import useImages from "../hooks/useImages";
 import usePosts from "../hooks/usePosts";
 import type { Post } from "../models/Post";
 
 export default function PostPage() {
     const [post, setPost] = useState<Post | null>(null);
     const { postId } = useParams();
-    const { localImage } = useImages();
     const { localDate } = useDates();
     const { getById } = usePosts();
-    const { getRandomHue } = useImageFilters();
-
-    const hasImage = useMemo<boolean>(() => {
-        return !!post?.image && post.image.length > 0;
-    }, [post?.image]);
 
     useEffect(() => {
         const postIdNum = Number(postId);
@@ -36,17 +29,7 @@ export default function PostPage() {
         <>
             {post && (
                 <>
-                    <Box component="img"
-                        src={localImage(post.image)}
-                        sx={{
-                            borderRadius: 1,
-                            display: 'block',
-                            width: '100%',
-                            maxHeight: 200,
-                            objectFit: 'cover',
-                            margin: 'auto'
-                        }}
-                        style={hasImage ? {} : { filter: `hue-rotate(${getRandomHue(post.id, post.title)})` }} />
+                    <ImageBackdrop src={post.image} id={post.id} title={post.title} />
 
                     <div className="container">
                         <div className="row justify-content-center">
